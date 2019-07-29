@@ -1,30 +1,29 @@
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TrainRoute.Domain.Models;
+using Xunit;
 
 namespace TrainRoute.Test
 {
-    [TestClass]
     public class RouteTest
     {
-        [TestMethod]
+        [Fact]
         public void ShouldCreate()
         {
             Route route = new Route();
 
-            Assert.IsInstanceOfType(route, typeof(Route));
+            Assert.IsType<Route>(route);
         }
 
-        [TestMethod]
+        [Fact]
         public void ShouldAddNode()
         {
             Route route = new Route();
             route.AddNode(new TrainStation('A'));
 
-            Assert.AreEqual(route.Nodes.Count, 1);
+            Assert.Equal(route.Nodes.Count, 1);
         }
 
-        [TestMethod]
+        [Fact]
         public void ShouldCalculateRoute()
         {
             var stationA = new TrainStation('A');
@@ -38,7 +37,7 @@ namespace TrainRoute.Test
 
             int result = route.CalculateRouteDistance();
 
-            Assert.AreEqual(result, 3);
+            Assert.Equal(result, 3);
         }
     }
 }

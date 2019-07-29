@@ -1,23 +1,22 @@
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TrainRoute.Domain.Models;
+using Xunit;
 
 namespace TrainRoute.Test
 {
-    [TestClass]
     public class TrainMapTest
     {
-        [TestMethod]
+        [Fact]
         public void ShouldCreate()
         {
             var stations = new List<TrainStation> { new TrainStation('A'), new TrainStation('B') };
 
             TrainMap trainMap = new TrainMap(stations);
 
-            Assert.IsInstanceOfType(trainMap, typeof(TrainMap));
+            Assert.IsType<TrainMap>(trainMap);
         }
 
-        [TestMethod]
+        [Fact]
         public void ShouldFindShortestPath()
         {
             var stationA = new TrainStation('A');
@@ -34,7 +33,7 @@ namespace TrainRoute.Test
 
             int shortestPath = trainMap.FindShortestPathDistance('A', 'C');
 
-            Assert.AreEqual(shortestPath, 7);
+            Assert.Equal(shortestPath, 7);
         }
     }
 }
