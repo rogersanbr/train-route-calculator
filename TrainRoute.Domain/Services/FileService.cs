@@ -2,11 +2,11 @@ using Microsoft.Extensions.FileProviders;
 
 namespace TrainRoute.Domain
 {
-    public class RouteService : IRouteService
+    public class FileService : IFileService
     {
         private readonly IFileProvider _fileProvider;
 
-        public RouteService(IFileProvider fileProvider)
+        public FileService(IFileProvider fileProvider)
         {
             _fileProvider = fileProvider;
         }

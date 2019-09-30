@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
+using TrainRoute.Application.Services;
 using TrainRoute.Domain;
 
 namespace TrainRoute.Application
@@ -10,14 +11,16 @@ namespace TrainRoute.Application
         {
             // Register Services
             var collection = new ServiceCollection();
-            collection.AddScoped<IRouteService, RouteService>();
+            collection.AddScoped<IFileService, FileService>();
             collection.AddSingleton<IFileProvider>(new PhysicalFileProvider("/"));
 
             // Build Service Provider
             var serviceProvider = collection.BuildServiceProvider();
+            var filePath = "/home/spartanroger/Firefox_wallpaper.png";
+            var routeService = serviceProvider.GetService<IFileService>();
+            var fileInfo = routeService.GetFileInfo(filePath);
 
-            var routeService = serviceProvider.GetService<IRouteService>();
-            var fileInfo = routeService.GetFileInfo("/home/spartanroger/Firefox_wallpaper.png");
+            if(!fileInfo.Exists) ExecutionService.ExecuteFromHardCoded();
 
             serviceProvider.Dispose();
         }

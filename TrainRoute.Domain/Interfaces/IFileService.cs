@@ -2,7 +2,7 @@ using Microsoft.Extensions.FileProviders;
 
 namespace TrainRoute.Domain
 {
-    public interface IRouteService
+    public interface IFileService
     {
         void LoadFromFile();
         IFileInfo GetFileInfo(string FilePath);
