@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainRoute.Application", "TrainRoute.Application\TrainRoute.Application.csproj", "{0C609F23-E376-400B-885E-91F9978DB4C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainRoute.Application", "src\TrainRoute.Application\TrainRoute.Application.csproj", "{0C609F23-E376-400B-885E-91F9978DB4C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainRoute.Domain", "TrainRoute.Domain\TrainRoute.Domain.csproj", "{D45AD7B1-D98D-4957-95A4-3304C66056BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainRoute.Domain", "src\TrainRoute.Domain\TrainRoute.Domain.csproj", "{D45AD7B1-D98D-4957-95A4-3304C66056BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainRoute.Kernel", "TrainRoute.Kernel\TrainRoute.Kernel.csproj", "{EF9C1AE6-7241-4255-AC1F-06704A5F731D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainRoute.Kernel", "src\TrainRoute.Kernel\TrainRoute.Kernel.csproj", "{EF9C1AE6-7241-4255-AC1F-06704A5F731D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainRoute.Test", "TrainRoute.Test\TrainRoute.Test.csproj", "{6292A0F5-3B82-444F-A895-5CA0C9D32C87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainRoute.Test", "test\TrainRoute.Test\TrainRoute.Test.csproj", "{6292A0F5-3B82-444F-A895-5CA0C9D32C87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
