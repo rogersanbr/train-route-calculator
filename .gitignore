@@ -272,6 +272,7 @@ DocProject/Help/html
 
 publish/
 out/
+.vscode/
 
 
 
